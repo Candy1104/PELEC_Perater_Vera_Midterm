@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f7c4d6, #ffebef);
+    overflow-x: hidden;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#education {
+    padding: 30px 0 80px; 
+}
+
+
+.education-img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 90px; 
+    margin-left: 20px;
+}
+
+
+#skill {
+    padding: 60px 0 80px; 
+}
+
+.immersion-img {
+    width: 100%;
+    max-width: 500px; 
+    height: auto; 
+    border-radius: 15px; 
+    margin-top: 30px; 
+    margin-left: 20px;
+}
+
+
+#contact {
+    padding: 60px 20px; 
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    max-width: 100%;
+    overflow-y: hidden;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background:palevioletred;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    position: relative; 
+    transition: color 0.3s;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #8b4384;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.4s ease; 
+}
+
+.navbar a:hover::before,
+.navbar a.active::before {
+    width: 100%; 
+}
+
+.home {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.home-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-section {
+    flex: 1;
+    background: linear-gradient(135deg, #ffcccc, #ff99cc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;   
+}
+
+.profile-background {
+    width: 260px;
+    height: 260px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.8), 
+        0 0 10px rgba(255, 105, 180, 0.6), 
+        0 0 20px rgba(255, 105, 180, 0.4), 
+        0 0 30px rgba(138, 43, 226, 0.5), 
+        0 0 40px rgba(138, 43, 226, 0.3);
+}
+
+.profile-background:hover {
+    box-shadow: 
+        0 0 10px rgba(255, 255, 255, 1), 
+        0 0 15px rgba(255, 105, 180, 1), 
+        0 0 25px rgba(255, 105, 180, 0.8), 
+        0 0 35px rgba(138, 43, 226, 0.8), 
+        0 0 50px rgba(138, 43, 226, 0.6);
+}
+
+.profile-img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.right-section {
+    flex: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-section h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.right-section h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-box a {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff6699;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-box a:hover {
+    background-color: #ff3366;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ff6699;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ff6699;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin-right: 15px;
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+
+.social-icons a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 105, 180, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s;
+    z-index: 0;
+}
+
+.social-icons a:hover {
+    color: #ff3366;
+}
+
+.social-icons a:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.anime-sticker {
+    position: fixed;
+    bottom: 1px;
+    right: -20px;
+    width: 150px;
+    height: auto;
+    z-index: 10;
+}
+
+/* about*/
+#about{
+    padding: 80px 0;
+    color: rgb(0, 0, 0);
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #ff3366;
+    margin-top: 50px;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 10px 0 20px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.tab-links a {
+    color: #7aa3c5; 
+    text-decoration: none; 
+    position: relative; 
+    cursor: pointer;
+}
+
+.tab-links a:hover::after {
+    width: 100%; 
+}
+
+.tab-links a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #8b4384; 
+    position: absolute;
+    left: 0; 
+    bottom: -8px; 
+    transition: width 0.5s; 
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents {
+    display: block; 
+}
+
+.tab-contents.active-tab {
+    display: block; 
+}
+
+.tab-contents:target {
+    display: block; 
+}
+
+.tab-links a:focus {
+    outline: 2px solid #ff3366;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    line-height: 1.5;
+    color: palevioletred;
+}
+
+.tab-contents2 ul li {
+    list-style: none;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.tab-contents ul li span {
+    color: #ff3366;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tab-contents2 ul li span {
+    color: #ff3366;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+    .sub-title {
+        font-size: 28px;
+    }
+
+    .btn-box a {
+        font-size: 14px;
+    }
+
+    .right-section h1 {
+        font-size: 28px;
+    }
+
+    .right-section h3 {
+        font-size: 16px;
+    }
+}
